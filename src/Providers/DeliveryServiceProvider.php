@@ -13,9 +13,8 @@ class DeliveryServiceProvider extends CommonServiceProvider
     {
     	parent::boot();
 
-        app('amethyst')->pushMorphRelation('price', 'target', 'delivery');
+        app('amethyst')->pushMorphRelation('price', 'priceable', 'delivery');
         app('amethyst')->pushMorphRelation('time-range', 'target', 'delivery');
-        app('amethyst')->pushMorphRelation('owner', 'target', 'delivery');
     
     }
 

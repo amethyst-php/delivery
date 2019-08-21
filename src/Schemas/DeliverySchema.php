@@ -18,10 +18,8 @@ class DeliverySchema extends Schema
     {
         return [
             Attributes\IdAttribute::make(),
-            Attributes\TextAttribute::make('uid')
-                ->setDefault(function ($entity, $attribute) {
-                    return $attribute->getManager()->getRepository()->generateUid();
-                }),
+            Attributes\UUidAttribute::make('uuid')
+                ->setFillable(false),
             Attributes\TextAttribute::make('session_id'),
             Attributes\BelongsToAttribute::make('address_id')
                 ->setRelationName('address')

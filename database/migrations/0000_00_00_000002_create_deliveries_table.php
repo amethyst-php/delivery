@@ -15,7 +15,7 @@ class CreateDeliveriesTable extends Migration
         Schema::create(Config::get('amethyst.delivery.data.delivery.table'), function (Blueprint $table) {
             $table->increments('id');
 
-            $table->string('uid')->unique();
+            $table->string('uuid')->unique();
             $table->string('session_id')->nullable();
 
             $table->integer('address_id')->unsigned();

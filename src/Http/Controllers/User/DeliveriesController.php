@@ -23,18 +23,6 @@ class DeliveriesController extends RestManagerController
      */
     public function __construct()
     {
-        $this->middleware('auth:api');
         parent::__construct();
-    }
-
-    /**
-     * Create a new instance for query.
-     */
-    public function getQuery()
-    {
-        return $this->getManager()
-        ->getRepository()
-        ->getQuery()
-        ->where('owner.created');
     }
 }

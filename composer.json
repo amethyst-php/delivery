@@ -1,0 +1,42 @@
+{
+    "name": "amethyst/delivery",
+    "type": "library",
+    "keywords": ["laravel", "amethyst", "amethyst-delivery", "delivery"],
+    "license": "MIT",
+    "require": {
+        "php": ">=7.1",
+        "amethyst/common": "0.1.*",
+        "amethyst/time-range": "0.1.*",
+        "amethyst/address": "0.1.*",
+        "amethyst/shipment-zone": "0.1.*",
+        "amethyst/price": "0.1.*",
+        "amethyst/owner": "0.1.*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~7.0",
+        "orchestra/testbench": "3.6.*",
+        "amethyst/foo": "0.1.*",
+        "amethyst/user": "0.1.*"
+    },
+    "autoload": {
+        "psr-4" : {
+            "Amethyst\\" : "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": { 
+            "Amethyst\\Tests\\": "tests/" 
+        }
+    },
+    "extra": {
+        "amethyst": {
+            "package": "delivery",
+            "namespace": "Amethyst"
+        },
+        "laravel": {
+            "providers": [
+                "Amethyst\\Providers\\DeliveryServiceProvider"
+            ]
+        }
+    }
+}

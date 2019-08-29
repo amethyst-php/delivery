@@ -18,8 +18,12 @@ class DeliverySchema extends Schema
     {
         return [
             Attributes\IdAttribute::make(),
-            Attributes\UUidAttribute::make('uuid')
+            Attributes\UuidAttribute::make('uuid')
                 ->setFillable(false),
+            Attributes\TextAttribute::make('code'),
+            Attributes\TextAttribute::make('name')
+                ->setRequired(true),
+            Attributes\TextAttribute::make('phone'),
             Attributes\TextAttribute::make('session_id'),
             Attributes\BelongsToAttribute::make('address_id')
                 ->setRelationName('address')
@@ -36,6 +40,7 @@ class DeliverySchema extends Schema
                 ->setRelationName('target')
                 ->setRelations(app('amethyst')->getMorphRelationable('delivery', 'target'))
                 ->setRequired(true),
+            Attributes\LongTextAttribute::make('notes'),
             Attributes\CreatedAtAttribute::make(),
             Attributes\UpdatedAtAttribute::make(),
             Attributes\DeletedAtAttribute::make(),

@@ -18,6 +18,10 @@ class CreateDeliveriesTable extends Migration
             $table->string('uuid')->unique();
             $table->string('session_id')->nullable();
 
+            $table->string('code')->nullable();
+            $table->string('name');
+            $table->string('phone')->nullable();
+            
             $table->integer('address_id')->unsigned();
             $table->foreign('address_id')->references('id')->on(Config::get('amethyst.address.data.address.table'));
 
@@ -27,6 +31,8 @@ class CreateDeliveriesTable extends Migration
             $table->string('target_type');
             $table->integer('target_id')->unsigned();
             
+            $table->text('notes')->nullable();
+
             $table->timestamps();
             $table->softDeletes();
         });

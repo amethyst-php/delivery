@@ -19,10 +19,10 @@ class CreateDeliveriesTable extends Migration
             $table->string('session_id')->nullable();
 
             $table->string('code')->nullable();
-            $table->string('name');
+            $table->string('name')->nullable();
             $table->string('phone')->nullable();
             
-            $table->integer('address_id')->unsigned();
+            $table->integer('address_id')->unsigned()->nullable();
             $table->foreign('address_id')->references('id')->on(Config::get('amethyst.address.data.address.table'));
 
             $table->integer('shipment_zone_id')->unsigned();

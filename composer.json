@@ -4,19 +4,19 @@
     "keywords": ["laravel", "amethyst", "amethyst-delivery", "delivery"],
     "license": "MIT",
     "require": {
-        "php": ">=7.1",
-        "amethyst/common": "0.1.*",
-        "amethyst/time-range": "0.1.*",
-        "amethyst/address": "0.1.*",
-        "amethyst/shipment-zone": "0.1.*",
-        "amethyst/price": "0.1.*",
-        "amethyst/owner": "0.1.*"
+        "php": ">=7.2",
+        "amethyst/core": "0.2.*",
+        "amethyst/time-range": "0.2.*",
+        "amethyst/address": "0.2.*",
+        "amethyst/shipment-zone": "0.2.*",
+        "amethyst/price": "0.2.*",
+        "amethyst/owner": "0.2.*"
     },
     "require-dev": {
         "phpunit/phpunit": "~7.0",
         "orchestra/testbench": "3.6.*",
-        "amethyst/foo": "0.1.*",
-        "amethyst/user": "0.1.*"
+        "amethyst/foo": "0.2.*",
+        "amethyst/user": "0.2.*"
     },
     "autoload": {
         "psr-4" : {

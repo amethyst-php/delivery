@@ -2,8 +2,8 @@
 
 namespace Amethyst\Http\Controllers\User;
 
-use Amethyst\Api\Http\Controllers\RestManagerController;
-use Amethyst\Api\Http\Controllers\Traits as RestTraits;
+use Amethyst\Core\Http\Controllers\RestManagerController;
+use Amethyst\Core\Http\Controllers\Traits as RestTraits;
 use Amethyst\Managers\DeliveryManager;
 use Illuminate\Http\Request;
 

@@ -2,10 +2,10 @@
 
 namespace Amethyst\Schemas;
 
+use Amethyst\Managers\AddressManager;
+use Amethyst\Managers\ShipmentZoneManager;
 use Railken\Lem\Attributes;
 use Railken\Lem\Schema;
-use Amethyst\Managers\ShipmentZoneManager;
-use Amethyst\Managers\AddressManager;
 
 class DeliverySchema extends Schema
 {

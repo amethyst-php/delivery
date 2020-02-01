@@ -6,8 +6,8 @@ use Railken\Lem\Repository;
 use Ramsey\Uuid\Uuid;
 
 class DeliveryRepository extends Repository
-{   
-	/**
+{
+    /**
      * Generate token.
      *
      * @return string

@@ -21,7 +21,7 @@ class CreateDeliveriesTable extends Migration
             $table->string('code')->nullable();
             $table->string('name')->nullable();
             $table->string('phone')->nullable();
-            
+
             $table->integer('address_id')->unsigned()->nullable();
             $table->foreign('address_id')->references('id')->on(Config::get('amethyst.address.data.address.table'));
 
@@ -30,7 +30,7 @@ class CreateDeliveriesTable extends Migration
 
             $table->string('target_type');
             $table->integer('target_id')->unsigned();
-            
+
             $table->text('notes')->nullable();
 
             $table->timestamps();

@@ -5,17 +5,16 @@ namespace Amethyst\Providers;
 use Amethyst\Core\Providers\CommonServiceProvider;
 
 class DeliveryServiceProvider extends CommonServiceProvider
-{  	
-	/**
-	 * @inherit
-	 */
-	public function boot()
+{
+    /**
+     * @inherit
+     */
+    public function boot()
     {
-    	parent::boot();
+        parent::boot();
 
         app('amethyst')->pushMorphRelation('price', 'priceable', 'delivery');
         app('amethyst')->pushMorphRelation('time-range', 'target', 'delivery');
-    
     }
 
     /**

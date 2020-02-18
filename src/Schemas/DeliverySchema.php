@@ -33,12 +33,12 @@ class DeliverySchema extends Schema
                 ->setRelationName('shipment_zone')
                 ->setRelationManager(ShipmentZoneManager::class)
                 ->setRequired(true),
-            Attributes\EnumAttribute::make('target_type', app('amethyst')->getMorphListable('delivery', 'target'))
+            Attributes\EnumAttribute::make('target_type', app('amethyst')->getDataNames())
                 ->setRequired(true),
             Attributes\MorphToAttribute::make('target_id')
                 ->setRelationKey('target_type')
                 ->setRelationName('target')
-                ->setRelations(app('amethyst')->getMorphRelationable('delivery', 'target'))
+                ->setRelations(app('amethyst')->getDataManagers())
                 ->setRequired(true),
             Attributes\LongTextAttribute::make('notes'),
             Attributes\CreatedAtAttribute::make(),

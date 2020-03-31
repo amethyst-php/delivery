@@ -12,9 +12,6 @@ class DeliveryServiceProvider extends CommonServiceProvider
     public function boot()
     {
         parent::boot();
-
-        app('amethyst')->pushMorphRelation('price', 'priceable', 'delivery');
-        app('amethyst')->pushMorphRelation('time-range', 'target', 'delivery');
     }
 
     /**
